@@ -106,10 +106,9 @@ public void avance(int nombrePas) {
    @Override
     public String toString() {
     	return "nom : "+this.getNom() +
-      		  " position ( x : "+this.getPosition().getX() + " / y : "+this.getPosition().getY() +" ) "+
+      		  " position ( X : "+this.getPosition().getX() + " /  Y : "+this.getPosition().getY() +" ) "+
       		  " direction : "+this.getDirection()+
-              " turbo : "+ (this.turbo ? "active" : "desactive");	//(condition ? valeurSiVrai : valeurSiFaux)  Ternary Operator
-
+              " turbo : "+ (this.turbo ? "active" : "desactive");	 
     }
    
    public void activeTurbo() {

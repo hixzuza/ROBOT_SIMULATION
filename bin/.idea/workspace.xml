@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="96454ae7-1417-450b-b3a9-0579b3ef3f4d" name="Changes" comment="" />
+    <list default="true" id="5f7596f6-868f-4283-9aca-80ec2024f650" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
+  "associatedIndex": 4
 }]]></component>
-  <component name="ProjectId" id="36bUVJViXGcw3vO3BRBdk2DSNsk" />
+  <component name="ProjectId" id="36bUViVFFFTy5b8oIKnstCFOEKP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Simulation.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/WIN 11/eclipse-workspace/amamra abdennour mohammed/bin"
+    "last_opened_file_path": "C:/Users/WIN 11/eclipse-workspace/amamra abdennour mohammed/src"
   }
 }]]></component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="96454ae7-1417-450b-b3a9-0579b3ef3f4d" name="Changes" comment="" />
-      <created>1765274786999</created>
+      <changelist id="5f7596f6-868f-4283-9aca-80ec2024f650" name="Changes" comment="" />
+      <created>1765274789835</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1765274786999</updated>
+      <updated>1765274789835</updated>
     </task>
     <servers />
   </component>

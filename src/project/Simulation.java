@@ -30,7 +30,6 @@ public class Simulation {
 		return this.robot;
 	}
 	
-	
 	public ArrayList<Position> getObstacle() {
 		return this.obstacle;
 	}
@@ -78,21 +77,17 @@ public class Simulation {
 	
 	private static void afficherMenuAnime() {
 		try {
-			// Nettoyer l'écran (optionnel)
-			// System.out.print("\033[H\033[2J");
-			// System.out.flush();
+		
 			
 			System.out.println();
 			
-			// Animation de la bordure supérieure
-			String ligne1 = "╔═══════════════════════════════════════╗";
+		String ligne1 = "╔═══════════════════════════════════════╗";
 			for (char c : ligne1.toCharArray()) {
 				System.out.print(BLUE + BOLD + c + RESET);
 				Thread.sleep(10);
 			}
 			System.out.println();
 			
-			// Titre avec animation
 			String titre = "║       SIMULATION MENU                 ║";
 			for (char c : titre.toCharArray()) {
 				System.out.print(CYAN + BOLD + c + RESET);
@@ -100,7 +95,6 @@ public class Simulation {
 			}
 			System.out.println();
 			
-			// Bordure inférieure
 			String ligne2 = "╚═══════════════════════════════════════╝";
 			for (char c : ligne2.toCharArray()) {
 				System.out.print(BLUE + BOLD + c + RESET);
@@ -181,11 +175,18 @@ public class Simulation {
 			
 			switch (choice) {
 			
-			case 1 : simu.step();
+			case 1 : if (simu.getRobot().isEmpty()) {
+			    System.out.println(RED + "⚠️  You need to add at least one robot to move!" + RESET);
+			    break; 
+			}
+			simu.step();
 			break;
 			
 			
-			case 2 : System.out.println(CYAN + "enter numbre of steps u want : " + RESET);
+			case 2 :if (simu.getRobot().isEmpty()) {
+			    System.out.println(RED + "⚠️  You need to add at least one robot to move!" + RESET);
+			    break;  }
+			    System.out.println(CYAN + "enter numbre of steps u want : " + RESET);
 			int ns=scan.nextInt();
 			simu.setp(ns);
 			break;
@@ -278,26 +279,39 @@ public class Simulation {
 			 
 			 break;
 			 
-			case 11 : System.out.println(BLUE + " turn right " + RESET);
-			
+			case 11 :if (simu.getRobot().isEmpty()) {
+			    System.out.println(RED + "⚠️  You need to add at least one robot to move!" + RESET);
+			    break;  }
+			System.out.println(BLUE +"turn right "+RESET);
+
 			for(AbstractRobot robot : simu.getRobot())
 				robot.droite();
 			break;
 			 
-			case 12: System.out.println(BLUE + "turn left " + RESET);
+			case 12:if (simu.getRobot().isEmpty()) {
+			    System.out.println(RED + "⚠️  You need to add at least one robot to move!" + RESET);
+			    break;  }
+			
+			System.out.println(BLUE+"turn left"+RESET);
 			
 			for (AbstractRobot robot : simu.getRobot())
 				if (robot instanceof RobotNG robotng) robotng.gauche();
 			break;
 			
 		
-			case 13: System.out.println(BLUE + "turn demitour " + RESET);
+			case 13:if (simu.getRobot().isEmpty()) {
+			    System.out.println(RED + "⚠️  You need to add at least one robot to move!" + RESET);
+			    break;  }
+			System.out.println(BLUE + "turn demitour " + RESET);
 			
 			for (AbstractRobot robot: simu.getRobot())
 				if (robot instanceof RobotNG robotng) robotng.demiTour();
 			break;
 			 
-			case 14: System.out.println(PURPLE + " avanceDiagonale  " + RESET);
+			case 14: if (simu.getRobot().isEmpty()) {
+			    System.out.println(RED + "⚠️  You need to add at least one robot to move!" + RESET);
+			    break;  }
+			System.out.println(PURPLE + " avanceDiagonale  " + RESET);
 			
 			for (AbstractRobot robot : simu.getRobot())
 				if (robot instanceof RobotNG robotng) robotng.avanceDiagonale();
